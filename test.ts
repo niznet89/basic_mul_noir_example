@@ -6,6 +6,7 @@ import { readFileSync } from 'fs';
 import process from 'process'
 import minimist from 'minimist'
 import { Web3Storage, getFilesFromPath } from 'web3.storage'
+import { NFTStorage, File, Blob } from 'nft.storage'
 //require('dotenv').config()
 // import { expect } from 'chai';
 // import { ethers } from "hardhat";
@@ -30,7 +31,7 @@ async function main() {
   console.log(verified);
 
   console.log(process.env);
-  const token = 0;
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGIzZjNjMWM0ZjMxOTNmODI4ODlEZTZBMmVjRjAxMmQwQ0VjRjQ4NUYiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTc5OTYxODUzNDUsIm5hbWUiOiJGUy1IQUNLIn0.zi3M741ubRNKN5n5YumSenNZmqR8ToHtQi4idlmKOHY";
 
 
   // Function will take image, Node.js doesn't have FILE, need to use Fs
@@ -45,7 +46,7 @@ async function main() {
   const finalFile = [new File([blob], 'hello.json')]
 
 
-  const cid = await storage.put([JSON.stringify({proof: proof, imageFile: "imagefile.com"})])
+  const cid = await storage.put(finalFile);
   console.log('Content added with CID:', cid)
 
 

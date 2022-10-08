@@ -28,6 +28,8 @@
   "dependencies": {
     "@noir-lang/aztec_backend": "^0.10.0",
     "@noir-lang/barretenberg": "^2.18.0",
-    "@noir-lang/noir_wasm": "^0.10.0"
+    "@noir-lang/noir_wasm": "^0.10.0",
+    "minimist": "^1.2.5",
+    "web3.storage": "^3.1.0"
   }
 }
